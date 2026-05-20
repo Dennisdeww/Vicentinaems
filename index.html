@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #0b0b0b;
@@ -21,6 +23,7 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -49,20 +52,24 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .logo-container {
             display: flex;
             flex-direction: column;
         }
+
         .logo-main {
             font-size: 24px;
             font-weight: 300;
             letter-spacing: 6px;
             text-transform: uppercase;
         }
+
         .logo-main span {
             font-weight: 700;
             color: var(--primary-orange);
         }
+
         .logo-sub {
             display: flex;
             align-items: center;
@@ -71,6 +78,7 @@
             color: var(--gray-text);
             margin-top: 2px;
         }
+
         .pulse-line {
             width: 30px;
             height: 12px;
@@ -79,11 +87,13 @@
             stroke-width: 2;
             fill: none;
         }
+
         nav ul {
             display: flex;
             list-style: none;
             gap: 25px;
         }
+
         nav ul li a {
             font-size: 11px;
             font-weight: 600;
@@ -92,7 +102,9 @@
             color: var(--gray-text);
             transition: color 0.3s;
         }
-        nav ul li a:hover, nav ul li a.active {
+
+        nav ul li a:hover,
+        nav ul li a.active {
             color: var(--primary-orange);
         }
 
@@ -103,12 +115,14 @@
             align-items: center;
             padding: 100px 8% 0 8%;
             position: relative;
-            background: linear-gradient(135deg, rgba(11,11,11,1) 40%, rgba(209,65,36,0.15) 100%);
+            background: linear-gradient(135deg, rgba(11, 11, 11, 1) 40%, rgba(209, 65, 36, 0.15) 100%);
         }
+
         .hero-content {
             max-width: 550px;
             z-index: 2;
         }
+
         .hero-content h1 {
             font-size: 48px;
             font-weight: 300;
@@ -117,10 +131,12 @@
             margin-bottom: 25px;
             text-transform: uppercase;
         }
+
         .hero-content h1 strong {
             font-weight: 700;
             color: var(--primary-orange);
         }
+
         .cta-btn {
             display: inline-block;
             background-color: var(--primary-orange);
@@ -135,10 +151,12 @@
             transition: transform 0.3s, background-color 0.3s;
             margin-bottom: 40px;
         }
+
         .cta-btn:hover {
             background-color: #b33218;
             transform: translateY(-2px);
         }
+
         .hero-footer-text {
             display: flex;
             align-items: center;
@@ -164,20 +182,28 @@
             border-radius: 8px;
             overflow: hidden;
         }
+
         /* Artificial generic waveform behind overlay */
         .hero-image-placeholder::before {
             content: '';
             position: absolute;
             width: 200%;
             height: 100%;
-            background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(209,65,36,0.05) 40px, rgba(209,65,36,0.05) 41px);
+            background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(209, 65, 36, 0.05) 40px, rgba(209, 65, 36, 0.05) 41px);
             transform: skewX(-20deg);
             animation: waveMove 20s linear infinite;
         }
+
         @keyframes waveMove {
-            0% { transform: translateX(0) skewX(-20deg); }
-            100% { transform: translateX(-50%) skewX(-20deg); }
+            0% {
+                transform: translateX(0) skewX(-20deg);
+            }
+
+            100% {
+                transform: translateX(-50%) skewX(-20deg);
+            }
         }
+
         .hero-image-placeholder p {
             font-size: 12px;
             letter-spacing: 2px;
@@ -194,12 +220,14 @@
             padding: 100px 8%;
             text-align: center;
         }
+
         .section-title-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 60px;
         }
+
         .section-title {
             font-size: 32px;
             font-weight: 300;
@@ -207,6 +235,7 @@
             letter-spacing: 4px;
             margin-bottom: 10px;
         }
+
         .approach .pulse-line {
             width: 60px;
             height: 25px;
@@ -221,7 +250,7 @@
             align-items: center;
             gap: 50px;
         }
-        
+
         /* Simulated Vector Suit Body */
         .suit-visual {
             position: relative;
@@ -231,6 +260,7 @@
             border-radius: 50px 50px 20px 20px;
             border: 4px solid #333;
         }
+
         .suit-visual::before {
             content: 'EMS SUIT';
             position: absolute;
@@ -239,7 +269,7 @@
             transform: translateX(-50%);
             font-size: 10px;
             letter-spacing: 3px;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255, 255, 255, 0.2);
         }
 
         /* Hotspots */
@@ -254,7 +284,9 @@
             animation: pulseGlow 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
             transition: transform 0.3s;
         }
-        .pulse-node:hover, .pulse-node.active {
+
+        .pulse-node:hover,
+        .pulse-node.active {
             transform: scale(1.4);
             background-color: #ff6242;
         }
@@ -266,11 +298,32 @@
         }
 
         /* Node Positioning */
-        #node-shoulders { top: 15%; left: 20%; }
-        #node-pecs { top: 22%; left: 50%; transform: translateX(-50%); }
-        #node-abs { top: 42%; left: 50%; transform: translateX(-50%); }
-        #node-quads { top: 68%; left: 33%; }
-        #node-quads-r { top: 68%; left: 60%; }
+        #node-shoulders {
+            top: 15%;
+            left: 20%;
+        }
+
+        #node-pecs {
+            top: 22%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #node-abs {
+            top: 42%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #node-quads {
+            top: 68%;
+            left: 33%;
+        }
+
+        #node-quads-r {
+            top: 68%;
+            left: 60%;
+        }
 
         /* Feature Info Cards */
         .feature-list {
@@ -280,6 +333,7 @@
             max-width: 450px;
             text-align: left;
         }
+
         .feature-item {
             background-color: #f7f7f7;
             padding: 20px;
@@ -287,18 +341,21 @@
             border-radius: 0 8px 8px 0;
             transition: all 0.3s ease;
         }
+
         .feature-item.active {
             border-left-color: var(--primary-orange);
             background-color: #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transform: translateX(5px);
         }
+
         .feature-item h3 {
             font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 5px;
         }
+
         .feature-item p {
             font-size: 13px;
             color: #666;
@@ -312,7 +369,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.85);
+            background: rgba(0, 0, 0, 0.85);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -321,10 +378,12 @@
             transition: opacity 0.3s ease;
             z-index: 2000;
         }
+
         .modal.open {
             opacity: 1;
             pointer-events: auto;
         }
+
         .modal-content {
             background: #111;
             border: 1px solid var(--primary-orange);
@@ -334,6 +393,7 @@
             text-align: center;
             position: relative;
         }
+
         .close-modal {
             position: absolute;
             top: 15px;
@@ -342,12 +402,14 @@
             cursor: pointer;
             color: var(--gray-text);
         }
+
         .modal-content h2 {
             font-size: 20px;
             letter-spacing: 2px;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
+
         .modal-content input {
             width: 100%;
             padding: 12px;
@@ -357,32 +419,58 @@
             color: white;
             font-family: inherit;
         }
+
         .modal-content input:focus {
             outline: 1px solid var(--primary-orange);
         }
 
         /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 968px) {
-            header { padding: 20px 4%; }
-            nav { display: none; } /* Simplified for structural presentation */
-            .hero { flex-direction: column; text-align: center; justify-content: center; padding-top: 140px; }
-            .hero-content { max-width: 100%; }
-            .hero-image-placeholder { display: none; }
-            .interactive-container { flex-direction: column; }
-            .hero-footer-text { justify-content: center; }
+            header {
+                padding: 20px 4%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            /* Simplified for structural presentation */
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                padding-top: 140px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-image-placeholder {
+                display: none;
+            }
+
+            .interactive-container {
+                flex-direction: column;
+            }
+
+            .hero-footer-text {
+                justify-content: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <div class="logo-container">
             <div class="logo-main">Vicentina</div>
             <div class="logo-sub">
-                EMS 
+                EMS
                 <svg class="pulse-line" viewBox="0 0 60 25">
-                    <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5"/>
-                </svg> 
+                    <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+                </svg>
                 Impulse
             </div>
         </div>
@@ -402,16 +490,18 @@
             <h1>Experience<br>The Impulse.<br>Transform In<br><strong>20 Minutes.</strong></h1>
             <button class="cta-btn" onclick="toggleModal(true)">Book Your Trial</button>
             <div class="hero-footer-text">
-                EMS 
+                EMS
                 <svg class="pulse-line" viewBox="0 0 60 25">
-                    <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5"/>
-                </svg> 
+                    <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+                </svg>
                 Impulse
             </div>
         </div>
 
         <div class="hero-image-placeholder">
-            <p><image style="height:100%;width:100%;object-fit:contain" src="img/logo.png"></p>
+            <p>
+                <image style="height:100%;width:100%;object-fit:contain" src="img/logo.png">
+            </p>
         </div>
     </section>
 
@@ -419,7 +509,7 @@
         <div class="section-title-container">
             <h2 class="section-title">Our Approach</h2>
             <svg class="pulse-line" viewBox="0 0 60 25">
-                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5"/>
+                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
             </svg>
         </div>
 
@@ -449,10 +539,78 @@
         </div>
     </section>
 
+    <section class="approach" id="services">
+        <div class="section-title-container">
+            <h2 class="section-title">Our services</h2>
+            <svg class="pulse-line" viewBox="0 0 60 25">
+                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+            </svg>
+        </div>
+
+        <div class="interactive-container">
+            <div class="suit-visual">
+                <div class="pulse-node active" id="node-shoulders" data-target="feat-perf"></div>
+                <div class="pulse-node" id="node-pecs" data-target="feat-time"></div>
+                <div class="pulse-node" id="node-abs" data-target="feat-stim"></div>
+                <div class="pulse-node" id="node-quads" data-target="feat-perf"></div>
+                <div class="pulse-node" id="node-quads-r" data-target="feat-perf"></div>
+            </div>
+
+            <div class="feature-list">
+                <div class="feature-item active" id="feat-perf">
+                    <h3>A</h3>
+                    <p>....</p>
+                </div>
+                <div class="feature-item" id="feat-time">
+                    <h3>B</h3>
+                    <p>....</p>
+                </div>
+                <div class="feature-item" id="feat-stim">
+                    <h3>C</h3>
+                    <p>....</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="approach" id="schedule">
+        <div class="section-title-container">
+            <h2 class="section-title">schedule</h2>
+            <svg class="pulse-line" viewBox="0 0 60 25">
+                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+            </svg>
+        </div>
+
+        <div class="interactive-container">
+            <div class="suit-visual">
+                <div class="pulse-node active" id="node-shoulders" data-target="feat-perf"></div>
+                <div class="pulse-node" id="node-pecs" data-target="feat-time"></div>
+                <div class="pulse-node" id="node-abs" data-target="feat-stim"></div>
+                <div class="pulse-node" id="node-quads" data-target="feat-perf"></div>
+                <div class="pulse-node" id="node-quads-r" data-target="feat-perf"></div>
+            </div>
+
+            <div class="feature-list">
+                <div class="feature-item active" id="feat-perf">
+                    <h3>aaa</h3>
+                    <p>.</p>
+                </div>
+                <div class="feature-item" id="feat-time">
+                    <h3>bbb</h3>
+                    <p>.</p>
+                </div>
+                <div class="feature-item" id="feat-stim">
+                    <h3>ccc</h3>
+                    <p>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="modal" id="bookingModal">
         <div class="modal-content">
             <span class="close-modal" onclick="toggleModal(false)">&times;</span>
-            <h2>Claim Your Free Session</h2>
+            <h2>Your session</h2>
             <form onsubmit="handleForm(event)">
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email Address" required>
@@ -466,7 +624,7 @@
         // --- MODAL CONTROLLER ---
         function toggleModal(show) {
             const modal = document.getElementById('bookingModal');
-            if(show) {
+            if (show) {
                 modal.classList.add('open');
             } else {
                 modal.classList.remove('open');
@@ -501,7 +659,7 @@
             let current = '';
             const sections = document.querySelectorAll('section');
             const navA = document.querySelectorAll('nav ul li a');
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 150) {
@@ -518,4 +676,5 @@
         });
     </script>
 </body>
+
 </html>

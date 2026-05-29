@@ -8,457 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- RESET & GLOBAL STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0b0b0b;
-            color: #ffffff;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* --- THEME COLORS --- */
-        :root {
-            --primary-orange: #d14124;
-            --dark-bg: #0b0b0b;
-            --light-bg: #ffffff;
-            --gray-text: #a0a0a0;
-        }
-
-        /* --- HEADER & NAVIGATION --- */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background-color: rgba(11, 11, 11, 0.95);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-        }
-
-        .logo-main span {
-            font-weight: 700;
-            color: var(--primary-orange);
-        }
-
-        .logo-sub {
-            display: flex;
-            align-items: center;
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: var(--gray-text);
-            margin-top: 2px;
-        }
-
-        .pulse-line {
-            width: 30px;
-            height: 12px;
-            margin: 0 8px;
-            stroke: var(--primary-orange);
-            stroke-width: 2;
-            fill: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--gray-text);
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--primary-orange);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 8% 0 8%;
-            position: relative;
-            background: linear-gradient(135deg, rgba(11, 11, 11, 1) 40%, rgba(209, 65, 36, 0.15) 100%);
-        }
-
-        .hero-content {
-            max-width: 550px;
-            z-index: 2;
-        }
-
-        .hero-content h1 {
-            font-size: 48px;
-            font-weight: 300;
-            line-height: 1.2;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        .hero-content h1 strong {
-            font-weight: 700;
-            color: var(--primary-orange);
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--primary-orange);
-            color: white;
-            padding: 15px 35px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-            margin-bottom: 40px;
-        }
-
-        .cta-btn:hover {
-            background-color: #b33218;
-            transform: translateY(-2px);
-        }
-
-        .hero-footer-text {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-            letter-spacing: 5px;
-            color: var(--gray-text);
-            text-transform: uppercase;
-        }
-
-        /* Hero Graphic Graphic Visual placeholder */
-        .hero-image-placeholder {
-            position: absolute;
-            right: 8%;
-            top: 55%;
-            transform: translateY(-50%);
-            width: 450px;
-            height: 550px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Artificial generic waveform behind overlay */
-        .hero-image-placeholder::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 100%;
-            background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(209, 65, 36, 0.05) 40px, rgba(209, 65, 36, 0.05) 41px);
-            transform: skewX(-20deg);
-            animation: waveMove 20s linear infinite;
-        }
-
-        @keyframes waveMove {
-            0% {
-                transform: translateX(0) skewX(-20deg);
-            }
-
-            100% {
-                transform: translateX(-50%) skewX(-20deg);
-            }
-        }
-
-        .hero-image-placeholder p {
-            font-size: 12px;
-            letter-spacing: 2px;
-            color: var(--gray-text);
-            z-index: 1;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* --- APPROACH SECTION (LIGHT BACKGROUND) --- */
-        .approach {
-            background-color: var(--light-bg);
-            color: #111111;
-            padding: 100px 8%;
-            text-align: center;
-        }
-
-        .section-title-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-        }
-
-        .approach .pulse-line {
-            width: 60px;
-            height: 25px;
-        }
-
-        /* Interactive Suit Layout */
-        .interactive-container {
-            display: flex;
-            max-width: 1000px;
-            margin: 0 auto;
-            justify-content: space-around;
-            align-items: center;
-            gap: 50px;
-        }
-
-        /* Simulated Vector Suit Body */
-        .suit-visual {
-            position: relative;
-            width: 300px;
-            height: 450px;
-            background: #1a1a1a;
-            border-radius: 50px 50px 20px 20px;
-            border: 4px solid #333;
-        }
-
-        .suit-visual::before {
-            content: 'EMS SUIT';
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Hotspots */
-        .pulse-node {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background-color: var(--primary-orange);
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 0 0 0 rgba(209, 65, 36, 0.7);
-            animation: pulseGlow 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
-            transition: transform 0.3s;
-        }
-
-        .pulse-node:hover,
-        .pulse-node.active {
-            transform: scale(1.4);
-            background-color: #ff6242;
-        }
-
-        @keyframes pulseGlow {
-            to {
-                box-shadow: 0 0 0 15px rgba(209, 65, 36, 0);
-            }
-        }
-
-        /* Node Positioning */
-        #node-shoulders {
-            top: 15%;
-            left: 20%;
-        }
-
-        #node-pecs {
-            top: 22%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        #node-abs {
-            top: 42%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        #node-quads {
-            top: 68%;
-            left: 33%;
-        }
-
-        #node-quads-r {
-            top: 68%;
-            left: 60%;
-        }
-
-        /* Feature Info Cards */
-        .feature-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 450px;
-            text-align: left;
-        }
-
-        .feature-item {
-            background-color: #f7f7f7;
-            padding: 20px;
-            border-left: 4px solid #ccc;
-            border-radius: 0 8px 8px 0;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item.active {
-            border-left-color: var(--primary-orange);
-            background-color: #fff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transform: translateX(5px);
-        }
-
-        .feature-item h3 {
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .feature-item p {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* --- MODAL DIALOG (FOR CTA BOOKING) --- */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            z-index: 2000;
-        }
-
-        .modal.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .modal-content {
-            background: #111;
-            border: 1px solid var(--primary-orange);
-            padding: 40px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--gray-text);
-        }
-
-        .modal-content h2 {
-            font-size: 20px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .modal-content input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            background: #222;
-            border: 1px solid #444;
-            color: white;
-            font-family: inherit;
-        }
-
-        .modal-content input:focus {
-            outline: 1px solid var(--primary-orange);
-        }
-
-        /* --- RESPONSIVE ADJUSTMENTS --- */
-        @media (max-width: 968px) {
-            header {
-                padding: 20px 4%;
-            }
-
-            nav {
-                display: none;
-            }
-
-            /* Simplified for structural presentation */
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                justify-content: center;
-                padding-top: 140px;
-            }
-
-            .hero-content {
-                max-width: 100%;
-            }
-
-            .hero-image-placeholder {
-                display: none;
-            }
-
-            .interactive-container {
-                flex-direction: column;
-            }
-
-            .hero-footer-text {
-                justify-content: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -474,21 +24,37 @@
                 Impulse
             </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#approach">Our Approach</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active" data-key="nav_home">Home</a></li>
+                    <li><a href="#technology" data-key="nav_technology">The Technology</a></li>
+                    <li><a href="#approach" data-key="nav_approach">Our Approach</a></li>
+                    <li><a href="#services" data-key="nav_services">Services</a></li>
+                    <li><a href="#schedule" data-key="nav_schedule">Schedule</a></li>
+                    <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-switcher-btn" id="langBtn">EN</button>
+                <ul class="lang-switcher-dropdown" id="langDropdown">
+                    <li><a href="#" data-lang="en">English</a></li>
+                    <li><a href="#" data-lang="pt">Português</a></li>
+                    <li><a href="#" data-lang="uk">Українська</a></li>
+                    <li><a href="#" data-lang="ru">Русский</a></li>
+                    <li><a href="#" data-lang="nl">Nederlands</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Experience<br>The Impulse.<br>Transform In<br><strong>20 Minutes.</strong></h1>
-            <button class="cta-btn" onclick="toggleModal(true)">Book Your Trial</button>
+            <h1 data-key="hero_title">Experience<br>The Impulse.<br>Transform In<br><strong>20 Minutes.</strong></h1>
+            <div class="cta-wrapper">
+                <a href="https://www.instagram.com/ems_alentejo/" target="_blank" rel="noopener noreferrer" class="cta-btn" data-key="cta_instagram">Book on Instagram</a>
+                <a href="https://wa.me/380667681077" target="_blank" rel="noopener noreferrer" class="cta-btn" data-key="cta_whatsapp">Contact on WhatsApp</a>
+            </div>
             <div class="hero-footer-text">
                 EMS
                 <svg class="pulse-line" viewBox="0 0 60 25">
@@ -505,9 +71,47 @@
         </div>
     </section>
 
+    <section class="approach" id="technology">
+        <div class="section-title-container">
+            <h2 class="section-title" data-key="tech_title">The Technology of EMS</h2>
+            <svg class="pulse-line" viewBox="0 0 60 25">
+                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+            </svg>
+        </div>
+        <div class="what-is-it-content">
+            <p data-key="tech_p">Electro Muscle Stimulation (EMS) is a revolutionary full-body workout that uses safe, low-frequency electrical impulses to stimulate up to 90% of your muscles simultaneously. This method provides a high-intensity workout in just 20 minutes, making it an incredibly efficient and effective way to achieve your fitness goals.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_1_h4">Time-Efficient</h4>
+                    <p data-key="benefit_card_1_p">Get the results of a 3-hour conventional workout in just 20 minutes.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_2_h4">Builds Strength</h4>
+                    <p data-key="benefit_card_2_p">Activates deep muscle fibers to increase strength and muscle mass effectively.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_3_h4">Gentle on Joints</h4>
+                    <p data-key="benefit_card_3_p">No weights, no high-impact movements. The perfect workout without stressing your joints.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_4_h4">Aids Weight Loss</h4>
+                    <p data-key="benefit_card_4_p">Boosts your metabolism during and after the workout, helping to burn fat.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_5_h4">Reduces Pain</h4>
+                    <p data-key="benefit_card_5_p">Improves posture and can help alleviate back pain by strengthening core muscles.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4 data-key="benefit_card_6_h4">Improves Performance</h4>
+                    <p data-key="benefit_card_6_p">Enhances speed, power, and endurance for athletes and fitness enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="approach" id="approach">
         <div class="section-title-container">
-            <h2 class="section-title">Our Approach</h2>
+            <h2 class="section-title" data-key="approach_title">Our Approach</h2>
             <svg class="pulse-line" viewBox="0 0 60 25">
                 <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
             </svg>
@@ -524,16 +128,16 @@
 
             <div class="feature-list">
                 <div class="feature-item active" id="feat-perf">
-                    <h3>Maximize Performance</h3>
-                    <p>Activate up to 90% of your muscle fibers simultaneously, reaching deep motor tissues traditional workouts miss completely.</p>
+                    <h3 data-key="feature_1_h3">Maximize Performance</h3>
+                    <p data-key="feature_1_p">Activate up to 90% of your muscle fibers simultaneously, reaching deep motor tissues traditional workouts miss completely.</p>
                 </div>
                 <div class="feature-item" id="feat-time">
-                    <h3>Save Time</h3>
-                    <p>A highly focused 20-minute session delivers metabolic stress equivalent to over 3 hours of standard high-impact gym training.</p>
+                    <h3 data-key="feature_2_h3">Save Time</h3>
+                    <p data-key="feature_2_p">A highly focused 20-minute session delivers metabolic stress equivalent to over 3 hours of standard high-impact gym training.</p>
                 </div>
                 <div class="feature-item" id="feat-stim">
-                    <h3>Targeted Stimulation</h3>
-                    <p>Independently scale localized low-frequency pulse levels to target custom trouble-zones or rehabilitation paths safely.</p>
+                    <h3 data-key="feature_3_h3">Targeted Stimulation</h3>
+                    <p data-key="feature_3_p">Independently scale localized low-frequency pulse levels to target custom trouble-zones or rehabilitation paths safely.</p>
                 </div>
             </div>
         </div>
@@ -541,140 +145,54 @@
 
     <section class="approach" id="services">
         <div class="section-title-container">
-            <h2 class="section-title">Our services</h2>
+            <h2 class="section-title" data-key="services_title">Our services</h2>
             <svg class="pulse-line" viewBox="0 0 60 25">
                 <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
             </svg>
         </div>
 
-        <div class="interactive-container">
-            <div class="suit-visual">
-                <div class="pulse-node active" id="node-shoulders" data-target="feat-perf"></div>
-                <div class="pulse-node" id="node-pecs" data-target="feat-time"></div>
-                <div class="pulse-node" id="node-abs" data-target="feat-stim"></div>
-                <div class="pulse-node" id="node-quads" data-target="feat-perf"></div>
-                <div class="pulse-node" id="node-quads-r" data-target="feat-perf"></div>
-            </div>
-
-            <div class="feature-list">
-                <div class="feature-item active" id="feat-perf">
-                    <h3>A</h3>
-                    <p>....</p>
-                </div>
-                <div class="feature-item" id="feat-time">
-                    <h3>B</h3>
-                    <p>....</p>
-                </div>
-                <div class="feature-item" id="feat-stim">
-                    <h3>C</h3>
-                    <p>....</p>
-                </div>
-            </div>
+        <div class="coming-soon-content">
+            <p data-key="services_p">New services are being developed. Check back soon for updates!</p>
         </div>
     </section>
 
     <section class="approach" id="schedule">
         <div class="section-title-container">
-            <h2 class="section-title">schedule</h2>
+            <h2 class="section-title" data-key="schedule_title">schedule</h2>
             <svg class="pulse-line" viewBox="0 0 60 25">
                 <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
             </svg>
         </div>
 
-        <div class="interactive-container">
-            <div class="suit-visual">
-                <div class="pulse-node active" id="node-shoulders" data-target="feat-perf"></div>
-                <div class="pulse-node" id="node-pecs" data-target="feat-time"></div>
-                <div class="pulse-node" id="node-abs" data-target="feat-stim"></div>
-                <div class="pulse-node" id="node-quads" data-target="feat-perf"></div>
-                <div class="pulse-node" id="node-quads-r" data-target="feat-perf"></div>
-            </div>
+        <div class="coming-soon-content">
+            <p data-key="schedule_p">Our full schedule will be available shortly. Contact us to book your session!</p>
+        </div>
+    </section>
 
-            <div class="feature-list">
-                <div class="feature-item active" id="feat-perf">
-                    <h3>aaa</h3>
-                    <p>.</p>
-                </div>
-                <div class="feature-item" id="feat-time">
-                    <h3>bbb</h3>
-                    <p>.</p>
-                </div>
-                <div class="feature-item" id="feat-stim">
-                    <h3>ccc</h3>
-                    <p>.</p>
-                </div>
+    <section class="contact-section" id="contact">
+        <div class="section-title-container">
+            <h2 class="section-title" data-key="contact_title">Get In Touch</h2>
+            <svg class="pulse-line" viewBox="0 0 60 25">
+                <path d="M0,12.5 L20,12.5 L25,2 L32,23 L37,8 L42,12.5 L60,12.5" />
+            </svg>
+        </div>
+        <div class="contact-details">
+            <div class="contact-item">
+                <h4 data-key="contact_instagram_h4">Instagram</h4>
+                <a href="https://www.instagram.com/ems_alentejo/" target="_blank" rel="noopener noreferrer">@ems_alentejo</a>
+            </div>
+            <div class="contact-item">
+                <h4 data-key="contact_whatsapp_h4">WhatsApp</h4>
+                <a href="https://wa.me/380667681077" target="_blank" rel="noopener noreferrer" data-key="contact_whatsapp_a">Chat with us</a>
+            </div>
+            <div class="contact-item">
+                <h4 data-key="contact_phone_h4">Phone</h4>
+                <a href="tel:+351961402617">+351 961 402 617</a>
             </div>
         </div>
     </section>
 
-    <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="toggleModal(false)">&times;</span>
-            <h2>Your session</h2>
-            <form onsubmit="handleForm(event)">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <button type="submit" class="cta-btn" style="margin-bottom:0; width:100%;">Submit Request</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // --- MODAL CONTROLLER ---
-        function toggleModal(show) {
-            const modal = document.getElementById('bookingModal');
-            if (show) {
-                modal.classList.add('open');
-            } else {
-                modal.classList.remove('open');
-            }
-        }
-
-        function handleForm(e) {
-            e.preventDefault();
-            alert('Thank you! Our EMS Specialist will contact you within 24 hours to book your run.');
-            toggleModal(false);
-        }
-
-        // --- INTERACTIVE APPARATUS EXPLORER CONTROLLER ---
-        const nodes = document.querySelectorAll('.pulse-node');
-        const items = document.querySelectorAll('.feature-item');
-
-        nodes.forEach(node => {
-            node.addEventListener('mouseenter', () => {
-                // Remove active states from everyone
-                nodes.forEach(n => n.classList.remove('active'));
-                items.forEach(i => i.classList.remove('active'));
-
-                // Set current item active
-                node.classList.add('active');
-                const targetId = node.getAttribute('data-target');
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-
-        // --- SCROLL WATCHER LOGIC FOR NAV HIGHLIGHTS ---
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            const navA = document.querySelectorAll('nav ul li a');
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navA.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href').includes(current)) {
-                    a.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

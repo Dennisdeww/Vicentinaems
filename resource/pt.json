@@ -1,7 +1,7 @@
 {
     "nav_home": "Início",
     "nav_technology": "A Tecnologia",
-    "nav_approach": "Nossa Abordagem",
+    "nav_approach": "Sobre Nós",
     "nav_services": "Serviços",
     "nav_schedule": "Horários",
     "nav_contact": "Contato",
@@ -22,13 +22,9 @@
     "benefit_card_5_p": "Melhora a postura e pode ajudar a aliviar dores nas costas, fortalecendo os músculos do core.",
     "benefit_card_6_h4": "Melhora o Desempenho",
     "benefit_card_6_p": "Aumenta a velocidade, potência e resistência para atletas e entusiastas do fitness.",
-    "approach_title": "Nossa Abordagem",
-    "feature_1_h3": "Maximizar Desempenho",
-    "feature_1_p": "Ative até 90% das suas fibras musculares simultaneamente, alcançando tecidos motores profundos que os treinos tradicionais não conseguem.",
-    "feature_2_h3": "Economize Tempo",
-    "feature_2_p": "Uma sessão focada de 20 minutos proporciona um estresse metabólico equivalente a mais de 3 horas de treino padrão em academia.",
-    "feature_3_h3": "Estimulação Direcionada",
-    "feature_3_p": "Ajuste independentemente os níveis de pulso de baixa frequência para visar zonas problemáticas ou caminhos de reabilitação com segurança.",
+    "approach_title": "Sobre Nós",
+    "about_us_subtitle": "Instrutores Certificados, Tecnologia de Ponta",
+    "about_us_p": "Combinamos a experiência dos nossos instrutores certificados com a mais recente tecnologia EMS para proporcionar uma experiência de treino personalizada, segura e altamente eficaz. A nossa equipa dedica-se a ajudá-lo a atingir os seus objetivos de fitness de forma eficiente e com orientação profissional a cada passo.",
     "services_title": "Nossos Serviços",
     "services_p": "Novos serviços estão a ser desenvolvidos. Volte em breve para novidades!",
     "schedule_title": "Horários",
@@ -37,5 +33,7 @@
     "contact_instagram_h4": "Instagram",
     "contact_whatsapp_h4": "WhatsApp",
     "contact_phone_h4": "Telefone",
-    "contact_whatsapp_a": "Fale conosco"
+    "contact_whatsapp_a": "Fale conosco",
+    "contact_location_h4": "Localização",
+    "contact_location_p": "Vicentina Studio Fitness<br>São Teotónio"
 }

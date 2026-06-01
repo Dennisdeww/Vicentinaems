@@ -1,7 +1,7 @@
 {
     "nav_home": "Home",
     "nav_technology": "The Technology",
-    "nav_approach": "Our Approach",
+    "nav_approach": "About Us",
     "nav_services": "Services",
     "nav_schedule": "Schedule",
     "nav_contact": "Contact",
@@ -22,13 +22,9 @@
     "benefit_card_5_p": "Improves posture and can help alleviate back pain by strengthening core muscles.",
     "benefit_card_6_h4": "Improves Performance",
     "benefit_card_6_p": "Enhances speed, power, and endurance for athletes and fitness enthusiasts.",
-    "approach_title": "Our Approach",
-    "feature_1_h3": "Maximize Performance",
-    "feature_1_p": "Activate up to 90% of your muscle fibers simultaneously, reaching deep motor tissues traditional workouts miss completely.",
-    "feature_2_h3": "Save Time",
-    "feature_2_p": "A highly focused 20-minute session delivers metabolic stress equivalent to over 3 hours of standard high-impact gym training.",
-    "feature_3_h3": "Targeted Stimulation",
-    "feature_3_p": "Independently scale localized low-frequency pulse levels to target custom trouble-zones or rehabilitation paths safely.",
+    "approach_title": "About Us",
+    "about_us_subtitle": "Certified Instructors, Latest Technology",
+    "about_us_p": "We combine the expertise of our certified instructors with the latest in EMS technology to deliver a personalized, safe, and highly effective workout experience. Our team is dedicated to helping you achieve your fitness goals efficiently and with professional guidance every step of the way.",
     "services_title": "Our services",
     "services_p": "New services are being developed. Check back soon for updates!",
     "schedule_title": "Schedule",
@@ -37,5 +33,7 @@
     "contact_instagram_h4": "Instagram",
     "contact_whatsapp_h4": "WhatsApp",
     "contact_phone_h4": "Phone",
-    "contact_whatsapp_a": "Chat with us"
+    "contact_whatsapp_a": "Chat with us",
+    "contact_location_h4": "Location",
+    "contact_location_p": "Vicentina Studio Fitness<br>São Teotónio"
 }

@@ -1,7 +1,7 @@
 {
     "nav_home": "Home",
     "nav_technology": "De Technologie",
-    "nav_approach": "Onze Aanpak",
+    "nav_approach": "Over Ons",
     "nav_services": "Diensten",
     "nav_schedule": "Schema",
     "nav_contact": "Contact",
@@ -22,13 +22,9 @@
     "benefit_card_5_p": "Verbetert de houding en kan rugpijn helpen verlichten door de kernspieren te versterken.",
     "benefit_card_6_h4": "Verbetert Prestaties",
     "benefit_card_6_p": "Verbetert snelheid, kracht en uithoudingsvermogen voor atleten en fitnessliefhebbers.",
-    "approach_title": "Onze Aanpak",
-    "feature_1_h3": "Maximaliseer Prestaties",
-    "feature_1_p": "Activeer tot 90% van je spiervezels tegelijk, en bereik diepe motorische weefsels die traditionele trainingen volledig missen.",
-    "feature_2_h3": "Bespaar Tijd",
-    "feature_2_p": "Een zeer gerichte sessie van 20 minuten levert metabole stress op die gelijk is aan meer dan 3 uur standaard sportschooltraining.",
-    "feature_3_h3": "Gerichte Stimulatie",
-    "feature_3_p": "Schaal onafhankelijk gelokaliseerde laagfrequente pulsniveaus om veilig aangepaste probleemzones of revalidatiepaden aan te pakken.",
+    "approach_title": "Over Ons",
+    "about_us_subtitle": "Gecertificeerde Instructeurs, Nieuwste Technologie",
+    "about_us_p": "Wij combineren de expertise van onze gecertificeerde instructeurs met de nieuwste EMS-technologie om een gepersonaliseerde, veilige en zeer effectieve trainingservaring te bieden. Ons team is toegewijd om u te helpen uw fitnessdoelen efficiënt en met professionele begeleiding bij elke stap te bereiken.",
     "services_title": "Onze Diensten",
     "services_p": "Nieuwe diensten worden ontwikkeld. Kom snel terug voor updates!",
     "schedule_title": "Schema",
@@ -37,5 +33,7 @@
     "contact_instagram_h4": "Instagram",
     "contact_whatsapp_h4": "WhatsApp",
     "contact_phone_h4": "Telefoon",
-    "contact_whatsapp_a": "Chat met ons"
+    "contact_whatsapp_a": "Chat met ons",
+    "contact_location_h4": "Locatie",
+    "contact_location_p": "Vicentina Studio Fitness<br>São Teotónio"
 }

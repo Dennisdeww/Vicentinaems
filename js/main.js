@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function getInitialLang() {
+        const hash = window.location.hash;
+        if (hash.startsWith('#!')) {
+            const hashLang = hash.substring(2);
+            if (supportedLangs.includes(hashLang)) { return hashLang; }
+        }
+
         const savedLang = getCookie('lang');
         if (savedLang && supportedLangs.includes(savedLang)) { return savedLang; }
         const browserLang = navigator.language.split('-')[0];
@@ -41,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
         }
+        document.documentElement.lang = lang;
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
             if (translations[lang] && translations[lang][key]) { el.innerHTML = translations[lang][key]; }
@@ -50,6 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
             a.classList.toggle('active', a.getAttribute('data-lang') === lang);
         });
         setCookie('lang', lang, 30);
+
+        // Update URL with hashbang without adding to history
+        history.replaceState(null, null, `#!${lang}`);
     }
 
     function setCookie(name, value, days) {

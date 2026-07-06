@@ -123,4 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- TECHNOLOGY CAROUSEL ---
+    const carouselSlider = document.querySelector('.carousel-slider');
+    if (carouselSlider) {
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const slideCount = slides.length;
+        let currentIndex = 0;
+
+        const moveToSlide = (index) => {
+            if (index < 0) {
+                currentIndex = slideCount - 1;
+            } else if (index >= slideCount) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            carouselSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
+
+        nextBtn.addEventListener('click', () => moveToSlide(currentIndex + 1));
+        prevBtn.addEventListener('click', () => moveToSlide(currentIndex - 1));
+    }
 });

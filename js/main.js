@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = el.getAttribute('data-key');
             const translation = translations[lang]?.[key];
             if (translation) {
-                if (el.tagName === 'META' && el.name === 'description') {
+                // Handle meta tags for SEO and social sharing
+                if (el.tagName === 'META') {
                     el.setAttribute('content', translation);
                 } else {
                     el.innerHTML = translation;

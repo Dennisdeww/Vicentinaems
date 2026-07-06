@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ems-alentejo.pt/index.html#!en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/index.html#!pt" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/index.html#!uk" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/index.html#!ru" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/index.html#!nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en" />
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

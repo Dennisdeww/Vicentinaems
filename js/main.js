@@ -50,7 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
-            if (translations[lang] && translations[lang][key]) { el.innerHTML = translations[lang][key]; }
+            const translation = translations[lang]?.[key];
+            if (translation) {
+                if (el.tagName === 'META' && el.name === 'description') {
+                    el.setAttribute('content', translation);
+                } else {
+                    el.innerHTML = translation;
+                }
+            }
         });
         langBtn.textContent = lang;
         document.querySelectorAll('.lang-switcher-dropdown a').forEach(a => {

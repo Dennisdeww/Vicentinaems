@@ -147,4 +147,80 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', () => moveToSlide(currentIndex + 1));
         prevBtn.addEventListener('click', () => moveToSlide(currentIndex - 1));
     }
+
+    // --- GALLERY MODAL ---
+    const galleryModal = document.getElementById('galleryModal');
+    const galleryLink = document.querySelector('a[href="#gallery"]');
+    const galleryCloseBtn = document.getElementById('galleryCloseBtn');
+    const galleryGrid = document.getElementById('galleryGrid');
+    let galleryPopulated = false;
+
+    const imageFiles = [
+        'about.jpg',
+        'IMG_8624.jpg',
+        'IMG_8653.jpg',
+        'IMG_8667.jpg',
+        'IMG_8678.jpg',
+        'IMG_8715.jpg',
+        'IMG_8727.jpg',
+        'IMG_8752.jpg',
+        'technology_1.jpg',
+        'technology_2.jpg',
+        'technology_3.jpg',
+        'technology_4.jpg'
+    ];
+
+    function openGallery(e) {
+        e.preventDefault();
+        if (!galleryPopulated) {
+            imageFiles.forEach(fileName => {
+                const imgContainer = document.createElement('div');
+                const img = document.createElement('img');
+                img.src = `img/photos/${fileName}`;
+                img.alt = `Gallery image: ${fileName.split('.')[0].replace('_', ' ')}`;
+                img.loading = 'lazy';
+                imgContainer.appendChild(img);
+                galleryGrid.appendChild(imgContainer);
+            });
+            galleryPopulated = true;
+        }
+        galleryModal.classList.add('show');
+        body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeGallery() {
+        galleryModal.classList.remove('show');
+        body.style.overflow = 'auto';
+    }
+
+    galleryLink.addEventListener('click', openGallery);
+    galleryCloseBtn.addEventListener('click', closeGallery);
+    galleryModal.addEventListener('click', (e) => {
+        if (e.target === galleryModal) { // Close only if clicking on the background overlay
+            closeGallery();
+        }
+    });
+
+    // --- LIGHTBOX for Gallery ---
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+
+    function openLightbox(e) {
+        if (e.target.tagName === 'IMG') {
+            lightbox.style.display = 'block';
+            lightboxImg.src = e.target.src;
+            galleryModal.style.overflow = 'hidden'; // Prevent gallery modal from scrolling
+        }
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        galleryModal.style.overflow = 'auto';
+    }
+
+    galleryGrid.addEventListener('click', openLightbox);
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    // Close lightbox when clicking on the background (but not the image itself)
+    lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg) { closeLightbox(); } });
 });

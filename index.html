@@ -41,6 +41,7 @@
                     <li><a href="#technology" data-key="nav_technology">The Technology</a></li>
                     <li><a href="#approach" data-key="nav_approach">Our Approach</a></li>
                     <li><a href="#services" data-key="nav_services">Services</a></li>
+                    <li><a href="#gallery" data-key="nav_gallery">Gallery</a></li>
                     <!-- <li><a href="#schedule" data-key="nav_schedule">Schedule</a></li> -->
                     <li><a href="#contact" data-key="nav_contact">Contact</a></li>
                 </ul>
@@ -220,6 +221,20 @@
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+
+    <div id="galleryModal" class="gallery-modal">
+        <span class="gallery-close-btn" id="galleryCloseBtn">&times;</span>
+        <div class="gallery-modal-content">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Images will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close-btn" id="lightboxCloseBtn">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
 
     <script src="js/main.js" defer></script>
 </body>

@@ -695,6 +695,9 @@ nav ul li a.active {
 .contact-item a.phone-btn {
     background-color: #4A4A4A;
 }
+.contact-item a.location-btn {
+    background-color: #4285F4; /* Google Maps Blue */
+}
 
 .map-container {
     max-width: 1000px;

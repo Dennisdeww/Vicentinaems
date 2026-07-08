@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Handle meta tags for SEO and social sharing
                 if (el.tagName === 'META') {
                     el.setAttribute('content', translation);
+                } else if (el.tagName === 'TITLE') {
+                    el.textContent = translation;
                 } else {
                     el.innerHTML = translation;
                 }

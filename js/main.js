@@ -166,18 +166,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let galleryPopulated = false;
 
     const imageFiles = [
+        'IMG_8752.jpg',
+        'IMG_8715.jpg',
         'about.jpg',
         'IMG_8624.jpg',
         'IMG_8653.jpg',
         'IMG_8667.jpg',
-        'IMG_8678.jpg',
-        'IMG_8715.jpg',
         'IMG_8727.jpg',
-        'IMG_8752.jpg',
-        'technology_1.jpg',
+
+        'IMG_8678.jpg',
         'technology_2.jpg',
         'technology_3.jpg',
-        'technology_4.jpg'
+
+        'technology_4.jpg',
+        'technology_1.jpg'
     ];
 
     function openGallery(e) {

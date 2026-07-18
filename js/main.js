@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const langBtn = document.getElementById('langBtn');
     const langDropdown = document.getElementById('langDropdown');
-    const supportedLangs = ['en', 'pt', 'uk', 'ru', 'nl'];
+    const supportedLangs = ['en', 'pt', 'uk', 'ru', 'nl', 'de', 'fr'];
 
     langBtn.addEventListener('click', (e) => { e.stopPropagation(); langDropdown.classList.toggle('show'); });
     document.addEventListener('click', (e) => { if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) { langDropdown.classList.remove('show'); } });

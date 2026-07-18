@@ -713,6 +713,117 @@ nav ul li a.active {
     border: 0;
 }
 
+/* --- FAQ Link in Hero --- */
+.faq-link {
+    color: var(--gray-text);
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.faq-link:hover {
+    color: white;
+}
+
+/* --- FAQ MODAL --- */
+.faq-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(11, 11, 11, 0.95);
+    animation: fadeIn 0.5s;
+    color: #111; /* Text color for light background */
+}
+
+.faq-modal.show {
+    display: block;
+}
+
+.faq-modal-content {
+    background-color: var(--light-bg);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+}
+
+.faq-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.faq-close-btn:hover,
+.faq-close-btn:focus {
+    color: #111;
+    text-decoration: none;
+}
+
+.faq-list {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item summary {
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    list-style: none; /* Remove default marker */
+    position: relative;
+    padding-right: 25px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Chrome */
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--primary-orange);
+    transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item p {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    padding-left: 5px;
+}
+
 /* --- GALLERY MODAL --- */
 .gallery-modal {
     display: none; /* Hidden by default */

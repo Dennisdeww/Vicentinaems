@@ -234,3 +234,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close lightbox when clicking on the background (but not the image itself)
     lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg) { closeLightbox(); } });
 });
+
+// --- FAQ MODAL ---
+const faqModal = document.getElementById('faqModal');
+const faqLink = document.getElementById('faqLink');
+const faqCloseBtn = document.getElementById('faqCloseBtn');
+
+if (faqLink) {
+    faqLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        faqModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+function closeFaqModal() {
+    if (faqModal) {
+        faqModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+if (faqCloseBtn) { faqCloseBtn.addEventListener('click', closeFaqModal); }
+
+if (faqModal) {
+    faqModal.addEventListener('click', (e) => { if (e.target === faqModal) { closeFaqModal(); } });
+}

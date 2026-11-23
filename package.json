@@ -1,0 +1,11 @@
+{
+  "name": "vicentinaems",
+  "version": "1.0.0",
+  "description": "Website for http://ems-alentejo.pt",
+  "scripts": {
+    "build": "node build.js",
+    "publish": "node publish.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

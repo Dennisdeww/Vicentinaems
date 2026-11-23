@@ -3,204 +3,225 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ems-alentejo.pt/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ems-alentejo.pt/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://ems-alentejo.pt/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
+    <lastmod>2024-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://ems-alentejo.pt/pt/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/uk/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/ru/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/nl/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/de/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/fr/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/index.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/index.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/index.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ems-alentejo.pt/pt/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <loc>https://ems-alentejo.pt/en/ems-training.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://ems-alentejo.pt/pt/ems-training.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <lastmod>2024-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://ems-alentejo.pt/uk/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/ru/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/nl/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/de/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ems-alentejo.pt/fr/ems-training.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/ems-training.html#!en"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html#!pt"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html#!uk"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html#!ru"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html#!nl"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html#!de"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html#!fr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/ems-training.html#!en"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ems-alentejo.pt/en/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ems-alentejo.pt/pt/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ems-alentejo.pt/uk/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ems-alentejo.pt/ru/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ems-alentejo.pt/nl/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ems-alentejo.pt/de/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ems-alentejo.pt/fr/ems-training.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ems-alentejo.pt/en/ems-training.html"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

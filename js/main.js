@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Determine current page (index.html or ems-training.html)
         const pathName = window.location.pathname;
-        const isEmsTraining = pathName.includes('ems-training.html');
+        const isEmsTraining = pathName.includes('ems-training');
         const isIndex = pathName.includes('index.html') || pathName.endsWith('/') || pathName === '/';
 
         // Build the target URL preserving the current page
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imageFiles.forEach(fileName => {
                 const imgContainer = document.createElement('div');
                 const img = document.createElement('img');
-                img.src = `img/photos/${fileName}`;
+                img.src = `/img/photos/${fileName}`;
                 img.alt = `Gallery image: ${fileName.split('.')[0].replace('_', ' ')}`;
                 img.loading = 'lazy';
                 imgContainer.appendChild(img);

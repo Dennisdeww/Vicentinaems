@@ -196,19 +196,19 @@ sourceFiles.forEach(file => {
 console.log('Updating root index.html hreflang links...');
 const rootIndexPath = path.join(baseDir, 'index.html');
 if (fs.existsSync(rootIndexPath)) {
-  const rootHtml = fs.readFileSync(rootIndexPath, 'utf8');
-  const updatedRootHtml = updateRootIndexHreflangs(rootHtml);
-  fs.writeFileSync(rootIndexPath, updatedRootHtml, 'utf8');
-  console.log('Updated root index.html hreflang links');
+  // const rootHtml = fs.readFileSync(rootIndexPath, 'utf8');
+  // const updatedRootHtml = updateRootIndexHreflangs(rootHtml);
+  // fs.writeFileSync(rootIndexPath, updatedRootHtml, 'utf8');
+  // console.log('Updated root index.html hreflang links');
 }
 
 // Update ems-training.html root hreflang links
 const rootEmsPath = path.join(baseDir, 'ems-training.html');
 if (fs.existsSync(rootEmsPath)) {
-  const rootEmsHtml = fs.readFileSync(rootEmsPath, 'utf8');
-  const updatedEmsHtml = updateRootIndexHreflangs(rootEmsHtml);
-  fs.writeFileSync(rootEmsPath, updatedEmsHtml, 'utf8');
-  console.log('Updated root ems-training.html hreflang links');
+  // const rootEmsHtml = fs.readFileSync(rootEmsPath, 'utf8');
+  // const updatedEmsHtml = updateRootIndexHreflangs(rootEmsHtml);
+  // fs.writeFileSync(rootEmsPath, updatedEmsHtml, 'utf8');
+  // console.log('Updated root ems-training.html hreflang links');
 }
 
 // Update sitemap.xml with proper URLs

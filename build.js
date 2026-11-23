@@ -148,6 +148,15 @@ function updateRootIndexHreflangs(html) {
     result = result.replace(oldXdefault, newXdefault);
   });
 
+  // Update EMS Training link with id "emsTrainingLink"
+  // This should point to language-specific ems-training.html URLs
+  supportedLangs.forEach(lang => {
+    const oldHref = 'href="ems-training.html"';
+    const newHref = `href="/${lang}/ems-training.html"`;
+    const regex = new RegExp(`(${oldHref})`, 'gi');
+    result = result.replace(regex, newHref);
+  });
+
   return result;
 }
 

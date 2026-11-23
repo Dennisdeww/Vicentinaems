@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- TRANSLATION & LANGUAGE SWITCHER ---
-    const translations = {};
-
     const langBtn = document.getElementById('langBtn');
     const langDropdown = document.getElementById('langDropdown');
     const supportedLangs = ['en', 'pt', 'uk', 'ru', 'nl', 'de', 'fr'];
@@ -18,58 +15,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function getInitialLang() {
-        const hash = window.location.hash;
-        if (hash.startsWith('#!')) {
-            const hashLang = hash.substring(2);
-            if (supportedLangs.includes(hashLang)) { return hashLang; }
+    function getActiveLanguage() {
+        // Check for new subfolder format: /en/index.html, /pt/ems-training.html, etc.
+        const pathName = window.location.pathname;
+        // Match /en/ or /pt/ etc. at the start of the path
+        const folderMatch = pathName.match(/^\/([a-z]{2})\//);
+        if (folderMatch) {
+            const folderLang = folderMatch[1];
+            if (supportedLangs.includes(folderLang)) { return folderLang; }
         }
-
-        const savedLang = getCookie('lang');
-        if (savedLang && supportedLangs.includes(savedLang)) { return savedLang; }
-        const browserLang = navigator.language.split('-')[0];
-        if (supportedLangs.includes(browserLang)) { return browserLang; }
         return 'en';
     }
 
-    async function setLanguage(lang) {
+    function setLanguage(lang) {
         if (!supportedLangs.includes(lang)) return;
-        if (!translations[lang]) {
-            try {
-                const response = await fetch(`resource/${lang}.json`);
-                if (!response.ok) {
-                    console.error(`Could not load translation file for ${lang}`);
-                    return;
-                }
-                translations[lang] = await response.json();
-            } catch (error) {
-                console.error(`Error fetching translation for ${lang}:`, error);
-                return;
-            }
-        }
-        document.documentElement.lang = lang;
-        document.querySelectorAll('[data-key]').forEach(el => {
-            const key = el.getAttribute('data-key');
-            const translation = translations[lang]?.[key];
-            if (translation) {
-                // Handle meta tags for SEO and social sharing
-                if (el.tagName === 'META') {
-                    el.setAttribute('content', translation);
-                } else if (el.tagName === 'TITLE') {
-                    el.textContent = translation;
-                } else {
-                    el.innerHTML = translation;
-                }
-            }
-        });
+        const currentLanguage = getActiveLanguage();
+        if (currentLanguage == lang) return;
+
         langBtn.textContent = lang;
         document.querySelectorAll('.lang-switcher-dropdown a').forEach(a => {
             a.classList.toggle('active', a.getAttribute('data-lang') === lang);
         });
         setCookie('lang', lang, 30);
 
-        // Update URL with hashbang without adding to history
-        history.replaceState(null, null, `#!${lang}`);
+        // Determine current page (index.html or ems-training.html)
+        const pathName = window.location.pathname;
+        const isEmsTraining = pathName.includes('ems-training.html');
+        const isIndex = pathName.includes('index.html') || pathName.endsWith('/') || pathName === '/';
+
+        // Build the target URL preserving the current page
+        let targetUrl;
+        if (lang === 'en') {
+            // English is at root level
+            targetUrl = isEmsTraining ? '/ems-training.html' : '/index.html';
+        } else {
+            // Other languages in subfolders
+            targetUrl = `/${lang}/${isEmsTraining ? 'ems-training.html' : 'index.html'}`;
+        }
+
+        window.location.replace(targetUrl);
+    }
+
+    function getDefaultLanguage() {       
+        const lang = getCookie('lang');
+        if(lang)
+        {
+            return lang;
+        }
+        return getActiveLanguage();
     }
 
     function setCookie(name, value, days) {
@@ -93,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    setLanguage(getInitialLang());
+
+
+    setLanguage(getDefaultLanguage());
 
     // --- SCROLL WATCHER LOGIC FOR NAV HIGHLIGHTS ---
     const sections = document.querySelectorAll('section');
@@ -205,36 +200,40 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = 'auto';
     }
 
-    galleryLink.addEventListener('click', openGallery);
-    galleryCloseBtn.addEventListener('click', closeGallery);
-    galleryModal.addEventListener('click', (e) => {
-        if (e.target === galleryModal) { // Close only if clicking on the background overlay
-            closeGallery();
-        }
-    });
+    if (galleryLink) galleryLink.addEventListener('click', openGallery);
+    if (galleryCloseBtn) galleryCloseBtn.addEventListener('click', closeGallery);
+    if (galleryModal) {
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) { // Close only if clicking on the background overlay
+                closeGallery();
+            }
+        });
+    }
 
     // --- LIGHTBOX for Gallery ---
     const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+    if (lightbox) {
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
 
-    function openLightbox(e) {
-        if (e.target.tagName === 'IMG') {
-            lightbox.style.display = 'block';
-            lightboxImg.src = e.target.src;
-            galleryModal.style.overflow = 'hidden'; // Prevent gallery modal from scrolling
+        function openLightbox(e) {
+            if (e.target.tagName === 'IMG') {
+                lightbox.style.display = 'block';
+                lightboxImg.src = e.target.src;
+                galleryModal.style.overflow = 'hidden'; // Prevent gallery modal from scrolling
+            }
         }
-    }
 
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        galleryModal.style.overflow = 'auto';
-    }
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            galleryModal.style.overflow = 'auto';
+        }
 
-    galleryGrid.addEventListener('click', openLightbox);
-    lightboxCloseBtn.addEventListener('click', closeLightbox);
-    // Close lightbox when clicking on the background (but not the image itself)
-    lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg) { closeLightbox(); } });
+        if (galleryGrid) galleryGrid.addEventListener('click', openLightbox);
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+        // Close lightbox when clicking on the background (but not the image itself)
+        lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg) { closeLightbox(); } });
+    }
 });
 
 // --- FAQ MODAL ---

@@ -2,10 +2,10 @@
 *.pdf
 node_modules
 publish/
-/de
-/en
-/fr
-/nl
-/pt
-/ru
-/uk
+de/
+en/
+fr/
+nl/
+pt/
+ru/
+uk/

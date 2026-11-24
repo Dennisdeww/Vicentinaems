@@ -27,7 +27,7 @@ supportedLangs.forEach(lang => {
  * Translate HTML content using translation keys
  * Handles multiline attributes properly
  */
-function translateHtml(html, langTranslations) {
+function translateHtml(html, langTranslations, isRoot = false) {
   let result = html;
 
   for (const [key, val] of Object.entries(langTranslations)) {
@@ -123,44 +123,6 @@ function updateSeoUrls(html, lang, filename) {
 }
 
 /**
- * Update root index.html and ems-training.html hreflang links to use subfolder structure
- * This replaces all hashbang links with proper subfolder URLs
- */
-function updateRootIndexHreflangs(html) {
-  let result = html;
-
-  // Replace all hreflang links from hashbang to subfolder structure
-  // Handles both index.html and ems-training.html
-  const pages = ['index.html', 'ems-training.html'];
-  pages.forEach(page => {
-    supportedLangs.forEach(lang => {
-      const oldUrl = `https://ems-alentejo.pt/${page}#!${lang}`;
-      const newUrl = `https://ems-alentejo.pt/${lang}/${page}`;
-      const regex = new RegExp(`href="${oldUrl}"`, 'gi');
-      result = result.replace(regex, `href="${newUrl}"`);
-    });
-  });
-
-  // Update x-default for both pages
-  pages.forEach(page => {
-    const oldXdefault = `href="https://ems-alentejo.pt/${page}#!en"`;
-    const newXdefault = `href="https://ems-alentejo.pt/en/${page}"`;
-    result = result.replace(oldXdefault, newXdefault);
-  });
-
-  // Update EMS Training link with id "emsTrainingLink"
-  // This should point to language-specific ems-training.html URLs
-  supportedLangs.forEach(lang => {
-    const oldHref = 'href="ems-training.html"';
-    const newHref = `href="/${lang}/ems-training.html"`;
-    const regex = new RegExp(`(${oldHref})`, 'gi');
-    result = result.replace(regex, newHref);
-  });
-
-  return result;
-}
-
-/**
  * Copy and translate each page to each language folder
  */
 sourceFiles.forEach(file => {
@@ -191,32 +153,13 @@ sourceFiles.forEach(file => {
 
     if (lang == "en") {
       if (translateHtml != html) {
-        fs.writeFileSync(srcPath, translatedHtml, 'utf8');
+        let translatedRootHtml = translateHtml(html, translations[lang], true);
+        fs.writeFileSync(srcPath, translatedRootHtml, 'utf8');
         console.log(`Translations were updated, also changing root english html${srcPath}`);
       }
     }
   });
 });
-
-// Update root index.html hreflang links to use new subfolder structure
-// This prevents "Page with redirect" issues in Google Search Console
-console.log('Updating root index.html hreflang links...');
-const rootIndexPath = path.join(baseDir, 'index.html');
-if (fs.existsSync(rootIndexPath)) {
-  // const rootHtml = fs.readFileSync(rootIndexPath, 'utf8');
-  // const updatedRootHtml = updateRootIndexHreflangs(rootHtml);
-  // fs.writeFileSync(rootIndexPath, updatedRootHtml, 'utf8');
-  // console.log('Updated root index.html hreflang links');
-}
-
-// Update ems-training.html root hreflang links
-const rootEmsPath = path.join(baseDir, 'ems-training.html');
-if (fs.existsSync(rootEmsPath)) {
-  // const rootEmsHtml = fs.readFileSync(rootEmsPath, 'utf8');
-  // const updatedEmsHtml = updateRootIndexHreflangs(rootEmsHtml);
-  // fs.writeFileSync(rootEmsPath, updatedEmsHtml, 'utf8');
-  // console.log('Updated root ems-training.html hreflang links');
-}
 
 // Update sitemap.xml with proper URLs
 function updateSitemap() {

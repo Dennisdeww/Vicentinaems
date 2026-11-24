@@ -27,7 +27,7 @@ supportedLangs.forEach(lang => {
  * Translate HTML content using translation keys
  * Handles multiline attributes properly
  */
-function translateHtml(html, langTranslations, isRoot = false) {
+function translateHtml(html, langTranslations) {
   let result = html;
 
   for (const [key, val] of Object.entries(langTranslations)) {
@@ -49,11 +49,9 @@ function translateHtml(html, langTranslations, isRoot = false) {
     result = result.replace(titleRegex, `$1${val}$3`);
 
     // 3. General element replacement - find element with data-key and replace innerHTML
-    // This handles <h1 data-key="key">...</h1>, <p data-key="key">...</p>, <span data-key="key">...</span>, etc.
-    // We need to be more specific: match opening tag with data-key, then content until matching closing tag
-    // Use a more constrained approach - match elements that start with <tag and have data-key
-    const elemRegex = new RegExp(`(<([a-z]+\\d?)\\s+[^>]*data-key="${key}"[^>]*>)([\\s\\S]*?)(</\\2>)`, 'gi');
-    result = result.replace(elemRegex, `$1${val}$4`);
+    // The data-key attribute should be KEPT in the output
+    const elemRegex = new RegExp(`(<([a-z]+\\d?)\\s+[^>]*data-key="${key}"[^>]*)>([\\s\\S]*?)(</\\2>)`, 'gi');
+    result = result.replace(elemRegex, `$1>${val}$4`);
   }
 
   return result;
@@ -152,9 +150,9 @@ sourceFiles.forEach(file => {
     console.log(`Created: ${lang}/${file}`);
 
     if (lang == "en") {
-      if (translateHtml != html) {
-        let translatedRootHtml = translateHtml(html, translations[lang], true);
-        fs.writeFileSync(srcPath, translatedRootHtml, 'utf8');
+      if (translatedHtml != html) {
+        const translatedSourceHtml = translateHtml(html, translations[lang]);
+        fs.writeFileSync(srcPath, translatedSourceHtml, 'utf8');
         console.log(`Translations were updated, also changing root english html${srcPath}`);
       }
     }

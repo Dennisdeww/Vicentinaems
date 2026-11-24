@@ -188,6 +188,13 @@ sourceFiles.forEach(file => {
     const destPath = path.join(langDir, file);
     fs.writeFileSync(destPath, translatedHtml, 'utf8');
     console.log(`Created: ${lang}/${file}`);
+
+    if (lang == "en") {
+      if (translateHtml != html) {
+        fs.writeFileSync(srcPath, translatedHtml, 'utf8');
+        console.log(`Translations were updated, also changing root english html${srcPath}`);
+      }
+    }
   });
 });
 
@@ -234,15 +241,15 @@ function updateSitemap() {
   <url>
     <loc>${url}</loc>
 ${supportedLangs.map(l => {
-  const lPrefix = l === 'en' ? '' : `/${l}`;
-  return `    <xhtml:link rel="alternate" hreflang="${l}" href="${baseUrl}${lPrefix}/${file}#!${l}"/>`;
-}).join('\n')}
+          const lPrefix = l === 'en' ? '' : `/${l}`;
+          return `    <xhtml:link rel="alternate" hreflang="${l}" href="${baseUrl}${lPrefix}/${file}#!${l}"/>`;
+        }).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/${file}#!en"/>
     <lastmod>2024-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${file === 'index.html' ? '1.0' : '0.8'}</priority>
   </url>`;
-        
+
         // Insert before closing </urlset>
         sitemap = sitemap.replace('</urlset>', newUrlEntry + '\n</urlset>');
         console.log(`Added to sitemap: ${url}`);

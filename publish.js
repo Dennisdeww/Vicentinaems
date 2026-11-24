@@ -16,6 +16,36 @@ if (!fs.existsSync(publishDir)) {
   console.log(`Created publish directory: ${publishDir}`);
 }
 
+/**
+ * Remove HTML comments from content
+ * Handles single-line and multi-line comments
+ */
+function stripHtmlComments(html) {
+  // Remove HTML comments <!-- ... -->
+  // Using regex with [\s\S] to match across newlines
+  return html.replace(/<!--[\s\S]*?-->/g, '');
+}
+
+/**
+ * Process all HTML files in a directory recursively
+ */
+function processHtmlFiles(dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      processHtmlFiles(fullPath);
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      const content = fs.readFileSync(fullPath, 'utf8');
+      const cleaned = stripHtmlComments(content);
+      if (content !== cleaned) {
+        fs.writeFileSync(fullPath, cleaned, 'utf8');
+        console.log(`  Stripped comments: ${path.relative(publishDir, fullPath)}`);
+      }
+    }
+  }
+}
+
 // 1. Copy index.html and ems-training.html from each language folder
 console.log('Copying language-specific pages...');
 supportedLangs.forEach(lang => {
@@ -189,6 +219,10 @@ if (fs.existsSync(robotsSrc)) {
 } else {
   console.warn('  WARNING: robots.txt not found');
 }
+
+// 10. Strip HTML comments from all HTML files in publish directory
+console.log('\nStripping HTML comments from published files...');
+processHtmlFiles(publishDir);
 
 console.log('\n=== Publish process complete ===');
 console.log(`\nAll files packaged into: ${publishDir}`);
